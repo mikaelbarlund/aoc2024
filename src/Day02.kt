@@ -10,7 +10,7 @@ class Day02 {
     companion object {
         fun day02(path: String) {
             println(
-                "day 1 first: " +
+                "first: " +
                         path.readFile()
                             .split("\n")
                             .map { it.split(" ").map { a -> a.toInt() } }
@@ -18,7 +18,7 @@ class Day02 {
                             .count{it}
             )
             println(
-                "day 1 second: " +
+                "second: " +
                         path.readFile()
                             .split("\n")
                             .map { it.split(" ").map { a -> a.toInt() } }

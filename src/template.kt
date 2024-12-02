@@ -7,11 +7,11 @@ class DayX {
     companion object {
         fun dayX(path: String) {
             println(
-                "day 1 first: " +
+                "first: " +
                         path.readFile()
             )
             println(
-                "day 1 second: " +
+                "second: " +
                         path.readFile()
             )
         }
