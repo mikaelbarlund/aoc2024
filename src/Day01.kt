@@ -1,8 +1,8 @@
 import kotlin.math.abs
 
 fun main() {
-    Day01.day01("src/input/test/01.1.txt")
-    Day01.day01("src/input/santa/01.1.txt")
+    val file = "src/input/santa/Day01.txt"
+    Day01.day01(file)
 }
 
 class Day01 {
