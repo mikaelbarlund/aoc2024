@@ -36,6 +36,7 @@ class Day06 {
             )
             val now = System.currentTimeMillis()
             val foo = distinctLocations.filter { it.inGrid(grid) && it != start }.filterIndexed { i, obstruct ->
+                if (i % 100 == 0) println(" " + i + " " + ((System.currentTimeMillis() - now) / (i + 1)))
                 val newGrid = grid.replaceChar(obstruct, "#")
                 val guardPathO = mutableListOf(Pair(start, UP))
                 while (guardPathO[0].first.inGrid(newGrid)) {
@@ -53,8 +54,6 @@ class Day06 {
                         Pair(nextPosition, guardPathO[0].second)
                     }
                     if (guardPathO.contains(nexttep)) {
-                        println(" " + i + " found " + guardPathO.size)
-                        println(" " + i + " " + ((System.currentTimeMillis() - now) / (i + 1)))
                         return@filterIndexed true
                     }
                     guardPathO.add(0, nexttep)
@@ -65,6 +64,7 @@ class Day06 {
                 "second: "
                         + foo.size
             )
+            println("time: " + (System.currentTimeMillis() - now) / 1000)
         }
     }
 }
